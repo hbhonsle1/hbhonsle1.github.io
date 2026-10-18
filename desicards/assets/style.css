@@ -130,6 +130,9 @@ strong { font-weight: 650; }
 .shots li { margin: 0; }
 .shots figure { margin: 0; }
 .shots img { width: 100%; border-radius: 26px; box-shadow: 0 18px 40px rgba(110, 18, 56, 0.22); }
+.shots .ipad { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 52rem; margin: 0 auto; }
+.shots .ipad img { border-radius: 22px; }
+.shots-title { text-align: center; margin: 3.2rem 0 1.6rem; }
 .shots figcaption { text-align: center; color: var(--ink-soft); font-size: 0.95rem; font-weight: 600; margin-top: 0.8rem; }
 
 .features { padding: 1rem 0 4rem; }
@@ -159,7 +162,8 @@ strong { font-weight: 650; }
   .features ul { grid-template-columns: minmax(0, 1fr); }
   body { font-size: 1rem; }
   .hero { padding: 3rem 0 2.4rem; }
-  .shots ul { grid-template-columns: minmax(0, 1fr); max-width: 22rem; margin: 0 auto; gap: 2.2rem; }
+  .shots ul { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 30rem; margin: 0 auto; gap: 1rem; }
+  .shots .ipad { grid-template-columns: minmax(0, 1fr); max-width: 22rem; }
   .doc { padding: 2.5rem 0 3rem; }
   .site-header .wrap { justify-content: center; }
   .site-footer .wrap { flex-direction: column; text-align: center; }
