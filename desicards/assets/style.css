@@ -143,10 +143,6 @@ strong { font-weight: 650; }
 .features li:nth-child(3n) { border-top-color: var(--teal); }
 .features h3 { margin: 0 0 0.35rem; font-size: 1.15rem; }
 .features p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
-.promise { text-align: center; margin: 2.6rem auto 0; max-width: 44rem; background: linear-gradient(135deg, var(--teal), var(--teal-deep)); color: var(--cream); border-radius: 22px; padding: 1.6rem 1.8rem; }
-.promise h3 { color: var(--marigold); margin: 0 0 0.4rem; font-size: 1.4rem; }
-.promise p { margin: 0; color: var(--cream); }
-.promise a { color: var(--marigold); font-weight: 700; }
 
 /* Footer */
 .site-footer { background: var(--maroon-deep); color: var(--cream-deep); padding: 2rem 0 2.4rem; font-size: 0.92rem; }
