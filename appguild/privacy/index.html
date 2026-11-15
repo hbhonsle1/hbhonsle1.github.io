@@ -71,6 +71,8 @@
         <h2 id="network">What the app talks to</h2>
         <p>AppGuild sends API requests directly from your device to Apple’s App Store Connect API at <a href="https://api.appstoreconnect.apple.com">api.appstoreconnect.apple.com</a>. There is no AppGuild backend in between.</p>
         <p>The app may also load your apps’ icons from image URLs Apple includes in that API response. If you tap a link, for example to the Resolution Center or App Store Connect in a browser, that page opens in the usual way on your device. Exchange rates used to show proceeds in your preferred currency are bundled with the app and are not fetched from the network.</p>
+        <p>If you track keywords in the Keywords tab, the app checks your App Store search position by sending the keyword, the country, and the store (iPhone, iPad, or Mac) from your device to Apple’s public iTunes Search API at <a href="https://itunes.apple.com">itunes.apple.com</a>. These requests use no account, API key, or identifier, and nothing about them is sent to the developer. Position history stays on your device.</p>
+        <p>Share cards are drawn on your device. An image leaves your device only if you share or save it yourself.</p>
         <p>You can use every screen without a key by choosing “Explore with sample data.” Sample mode does not contact Apple or the developer.</p>
 
         <h2 id="device">Data stored on your device</h2>
@@ -81,6 +83,7 @@
           <li>cached sales reports, so the app does not have to download them again every time</li>
           <li>a review timeline of version-state changes, recorded on the device from the time you start using the app</li>
           <li>icon addresses for your apps, so tiles can show the right artwork on the next launch</li>
+          <li>the keywords you track and their search-position history</li>
         </ul>
         <p>This information stays on your device and is not sent to the developer.</p>
 
@@ -88,7 +91,7 @@
         <p>The Proceeds and Review Status widgets read a small snapshot that the app writes to a shared App Group container on the same device. Widgets do not hold your API key and do not call Apple themselves. That snapshot never leaves the device.</p>
 
         <h2 id="disconnect">Disconnecting</h2>
-        <p>In Settings, “Disconnect and delete key” removes your key from this device’s Keychain, along with cached reports, the review timeline, widget data, and stored icon addresses. The key itself stays active in App Store Connect until you revoke it there. If a device is lost, revoke the key in App Store Connect and it stops working everywhere.</p>
+        <p>In Settings, “Disconnect and delete key” removes your key from this device’s Keychain, along with cached reports, the review timeline, widget data, stored icon addresses, and tracked keywords with their history. The key itself stays active in App Store Connect until you revoke it there. If a device is lost, revoke the key in App Store Connect and it stops working everywhere.</p>
 
         <h2 id="apple">Information Apple provides</h2>
         <p>If you choose to share diagnostics with app developers in your device settings, Apple may provide aggregated, anonymous crash and usage statistics through App Store Connect. This is controlled by Apple and your device settings, not by AppGuild.</p>
