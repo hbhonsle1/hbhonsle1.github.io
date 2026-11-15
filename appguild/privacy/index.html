@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · AppGuild</title>
+  <meta name="description" content="Privacy Policy for AppGuild for App Store Connect. No data collected. Your API key stays in the device Keychain. The app talks to Apple, not to an AppGuild server.">
+  <link rel="canonical" href="https://hbhonsle1.github.io/appguild/privacy/">
+  <meta name="theme-color" content="#14101E">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AppGuild">
+  <meta property="og:title" content="Privacy Policy">
+  <meta property="og:description" content="Privacy Policy for AppGuild for App Store Connect. No data collected. Your API key stays in the device Keychain. The app talks to Apple, not to an AppGuild server.">
+  <meta property="og:url" content="https://hbhonsle1.github.io/appguild/privacy/">
+  <meta property="og:image" content="https://hbhonsle1.github.io/appguild/assets/icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="AppGuild app icon: a four-blade pinwheel in marigold, lagoon, coral and iris on a deep purple background">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../assets/img/app-icon.png" alt="" width="34" height="34">AppGuild</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../privacy/" aria-current="page">Privacy</a></li>
+          <li><a href="../support/">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="blades" aria-hidden="true"></div>
+  <main id="main">
+    <article class="doc">
+      <div class="wrap narrow">
+        <p class="eyebrow">AppGuild for App Store Connect</p>
+        <h1>Privacy Policy</h1>
+        <p class="meta">Effective date: November 14, 2026</p>
+        <p class="lede">AppGuild does not collect any data. There is no AppGuild account, no analytics, no ads, no tracking, and no server run by the developer. You connect with your own App Store Connect API key, which stays in the Keychain on your device, and the app talks directly to Apple.</p>
+
+        <nav class="toc" aria-label="Contents">
+          <p>Contents</p>
+          <ol>
+            <li><a href="#collect">What we collect</a></li>
+            <li><a href="#key">Your API key</a></li>
+            <li><a href="#network">What the app talks to</a></li>
+            <li><a href="#device">Data stored on your device</a></li>
+            <li><a href="#widgets">Widgets</a></li>
+            <li><a href="#disconnect">Disconnecting</a></li>
+            <li><a href="#apple">Information Apple provides</a></li>
+            <li><a href="#changes">Changes to this policy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="collect">What we collect</h2>
+        <p>Nothing. AppGuild has no sign-in of its own, no analytics or crash-reporting SDKs, no advertising, and no tracking of any kind. The developer does not receive any information about you or how you use the app. The App Store privacy label is “Data Not Collected.”</p>
+
+        <h2 id="key">Your API key</h2>
+        <p>To connect a live account, you enter your own App Store Connect API key: the Issuer ID, Key ID, and the .p8 private key file, and optionally a vendor number for proceeds. These credentials are stored only in the iOS Keychain on your device. They are not written elsewhere on disk, not logged, and not sent to the developer.</p>
+        <p>The app uses the key on the device to sign short-lived JSON Web Tokens (ES256). Those tokens are what authenticate requests to Apple. The private key itself is not uploaded.</p>
+        <p>When you add a key, “Sync with iCloud Keychain” is off by default, so the key stays on that device. If you turn the option on, Apple can sync the key to your other devices through iCloud Keychain, which Apple encrypts end to end. That sync is handled by Apple, not by AppGuild, and you can leave it off.</p>
+
+        <h2 id="network">What the app talks to</h2>
+        <p>AppGuild sends API requests directly from your device to Apple’s App Store Connect API at <a href="https://api.appstoreconnect.apple.com">api.appstoreconnect.apple.com</a>. There is no AppGuild backend in between.</p>
+        <p>The app may also load your apps’ icons from image URLs Apple includes in that API response. If you tap a link, for example to the Resolution Center or App Store Connect in a browser, that page opens in the usual way on your device. Exchange rates used to show proceeds in your preferred currency are bundled with the app and are not fetched from the network.</p>
+        <p>You can use every screen without a key by choosing “Explore with sample data.” Sample mode does not contact Apple or the developer.</p>
+
+        <h2 id="device">Data stored on your device</h2>
+        <p>To make the app work, AppGuild saves a few things locally on your iPhone or iPad:</p>
+        <ul>
+          <li>your API credentials, in the Keychain, as described above</li>
+          <li>your preferences, such as display currency, haptics, notification settings, and onboarding state, in on-device storage</li>
+          <li>cached sales reports, so the app does not have to download them again every time</li>
+          <li>a review timeline of version-state changes, recorded on the device from the time you start using the app</li>
+          <li>icon addresses for your apps, so tiles can show the right artwork on the next launch</li>
+        </ul>
+        <p>This information stays on your device and is not sent to the developer.</p>
+
+        <h2 id="widgets">Widgets</h2>
+        <p>The Proceeds and Review Status widgets read a small snapshot that the app writes to a shared App Group container on the same device. Widgets do not hold your API key and do not call Apple themselves. That snapshot never leaves the device.</p>
+
+        <h2 id="disconnect">Disconnecting</h2>
+        <p>In Settings, “Disconnect and delete key” removes your key from this device’s Keychain, along with cached reports, the review timeline, widget data, and stored icon addresses. The key itself stays active in App Store Connect until you revoke it there. If a device is lost, revoke the key in App Store Connect and it stops working everywhere.</p>
+
+        <h2 id="apple">Information Apple provides</h2>
+        <p>If you choose to share diagnostics with app developers in your device settings, Apple may provide aggregated, anonymous crash and usage statistics through App Store Connect. This is controlled by Apple and your device settings, not by AppGuild.</p>
+        <p>Sales figures, reviews, and the other App Store Connect data you see in the app come from your own Apple Developer account, through Apple’s API, and are shown to you on this device.</p>
+
+        <h2 id="changes">Changes to this policy</h2>
+        <p>If this policy changes, we will update this page and the effective date above. Your continued use of AppGuild after a change means you accept the updated policy.</p>
+
+        <h2 id="contact">Contact</h2>
+        <p>Questions about privacy? Email <a href="mailto:easymote101@gmail.com">easymote101@gmail.com</a>.</p>
+        <p>AppGuild is an independent app and is not affiliated with, endorsed by, or sponsored by Apple Inc. App Store Connect, TestFlight, and iCloud Keychain are trademarks of Apple Inc.</p>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Hemant Bhonsle</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="../privacy/">Privacy Policy</a></li>
+          <li><a href="../support/">Support</a></li>
+          <li><a href="mailto:easymote101@gmail.com">easymote101@gmail.com</a></li>
+        </ul>
+      </nav>
+      <p class="legal">AppGuild is an independent app and is not affiliated with, endorsed by, or sponsored by Apple Inc. App Store Connect, TestFlight, and iCloud Keychain are trademarks of Apple Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>

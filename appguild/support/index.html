@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support · AppGuild</title>
+  <meta name="description" content="AppGuild support and FAQ: connecting your App Store Connect API key, sample data, widgets, and how to disconnect or revoke a key.">
+  <link rel="canonical" href="https://hbhonsle1.github.io/appguild/support/">
+  <meta name="theme-color" content="#14101E">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AppGuild">
+  <meta property="og:title" content="Support">
+  <meta property="og:description" content="AppGuild support and FAQ: connecting your App Store Connect API key, sample data, widgets, and how to disconnect or revoke a key.">
+  <meta property="og:url" content="https://hbhonsle1.github.io/appguild/support/">
+  <meta property="og:image" content="https://hbhonsle1.github.io/appguild/assets/icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="AppGuild app icon: a four-blade pinwheel in marigold, lagoon, coral and iris on a deep purple background">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../assets/img/app-icon.png" alt="" width="34" height="34">AppGuild</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../privacy/">Privacy</a></li>
+          <li><a href="../support/" aria-current="page">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="blades" aria-hidden="true"></div>
+  <main id="main">
+    <article class="doc faq">
+      <div class="wrap narrow">
+        <p class="eyebrow">AppGuild for App Store Connect</p>
+        <h1>Support</h1>
+        <p class="lede">Answers to common questions. Can’t find yours? Email us, we read everything.</p>
+
+        <h3>Getting started</h3>
+        <details>
+          <summary>What is AppGuild?</summary>
+          <p>AppGuild is a native iPhone and iPad app for your App Store Connect account. It shows proceeds, App Review status, customer reviews, and TestFlight for the apps you ship. It is made by Hemant Bhonsle and is not affiliated with Apple.</p>
+        </details>
+        <details>
+          <summary>How do I connect my account?</summary>
+          <p>AppGuild does not use an Apple ID sign-in. You connect with your own App Store Connect API key: the Issuer ID, Key ID, and the .p8 private key file you create in App Store Connect, plus a vendor number if you want to see proceeds (it’s in Payments and Financial Reports). The app checks the key with Apple before saving it. You’ll need an Apple Developer Program membership.</p>
+        </details>
+        <details>
+          <summary>Which key and role do I need?</summary>
+          <p>Use a Team key. A key with the Sales role is enough for proceeds. Admin unlocks review replies and TestFlight. Individual keys cannot read Sales and Trends reports.</p>
+        </details>
+        <details>
+          <summary>Can I try the app without a key?</summary>
+          <p>Yes. On the welcome screen, tap “Explore with sample data.” Every tab and both widgets work with realistic sample data, labeled in-app with an “Exploring sample data” banner. Sample mode does not contact Apple.</p>
+        </details>
+        <details>
+          <summary>Which devices does AppGuild support?</summary>
+          <p>AppGuild is a universal app for iPhone and iPad, and requires iOS 17 or later.</p>
+        </details>
+
+        <h3>Your key and data</h3>
+        <details>
+          <summary>Where is my API key stored?</summary>
+          <p>Only in the iOS Keychain on your device. The app signs short-lived tokens on the device and talks directly to Apple’s App Store Connect API. There is no AppGuild account and no AppGuild server. “Sync with iCloud Keychain” is off by default; turn it on if you want Apple to sync the key to your other devices, end-to-end encrypted.</p>
+        </details>
+        <details>
+          <summary>How do I disconnect or revoke a key?</summary>
+          <p>In Settings, choose “Disconnect and delete key.” That removes the key from this device’s Keychain, plus cached reports, the review timeline, and widget data. The key stays active in App Store Connect until you revoke it there. If a device is lost, revoke the key in App Store Connect and it stops working everywhere.</p>
+        </details>
+        <details>
+          <summary>Do you collect any data?</summary>
+          <p>No. AppGuild collects no data, has no analytics or tracking, and does not include third-party SDKs. See the <a href="../privacy/">Privacy Policy</a> for the full details.</p>
+        </details>
+
+        <h3>Using the app</h3>
+        <details>
+          <summary>Why don’t I see proceeds?</summary>
+          <p>Proceeds come from Apple’s Sales and Trends reports, which need a Team key and your vendor number. Add the vendor number in Settings if you skipped it during setup. New reports can also lag a day behind in App Store Connect itself.</p>
+        </details>
+        <details>
+          <summary>How do the widgets work?</summary>
+          <p>The Proceeds and Review Status widgets read a snapshot the app saves in a shared App Group container on your device after each refresh. Widgets never hold your API key and never call Apple themselves. Add them from the Home Screen or Lock Screen widget gallery.</p>
+        </details>
+        <details>
+          <summary>Can I reply to customer reviews?</summary>
+          <p>Yes, from the Reviews tab: reply, edit, or delete a response. This talks to Apple’s API with your key, so the key needs a role that allows review replies, typically Admin.</p>
+        </details>
+
+        <div class="contact-card">
+          <h2>Contact</h2>
+          <p>Questions, bugs or ideas? Email <a href="mailto:easymote101@gmail.com">easymote101@gmail.com</a> and include your device and iOS version if something isn’t working.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Hemant Bhonsle</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="../privacy/">Privacy Policy</a></li>
+          <li><a href="../support/">Support</a></li>
+          <li><a href="mailto:easymote101@gmail.com">easymote101@gmail.com</a></li>
+        </ul>
+      </nav>
+      <p class="legal">AppGuild is an independent app and is not affiliated with, endorsed by, or sponsored by Apple Inc. App Store Connect, TestFlight, and iCloud Keychain are trademarks of Apple Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>
